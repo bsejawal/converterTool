@@ -1,4 +1,4 @@
-package com.fpp.converter;
+package com.fpp.utils;
 
 public class Constants {
 	public final static double KM2MILE = 0.62;

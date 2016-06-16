@@ -1,4 +1,8 @@
-package com.fpp.converter;
+package com.fpp.factory;
+
+import com.fpp.converter.Celsius2Fahrenheit;
+import com.fpp.converter.Converter;
+import com.fpp.converter.Fahrenheit2Celsius;
 
 public class TemperatureFactory  extends AbstractFactory{
 

@@ -1,4 +1,4 @@
-package com.fpp.converter;
+package com.fpp.utils;
 
 public class BadInputException extends Exception {
 	

@@ -1,4 +1,8 @@
-package com.fpp.converter;
+package com.fpp.factory;
+
+import com.fpp.converter.Converter;
+import com.fpp.converter.Kg2Lbs;
+import com.fpp.converter.Lbs2Kg;
 
 public class WeightFactory extends AbstractFactory {
 

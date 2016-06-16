@@ -17,10 +17,10 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
-import com.fpp.converter.AbstractFactory;
-import com.fpp.converter.BadInputException;
 import com.fpp.converter.Converter;
-import com.fpp.converter.FactoryProducer;
+import com.fpp.factory.AbstractFactory;
+import com.fpp.factory.FactoryProducer;
+import com.fpp.utils.BadInputException;
 
 import javax.swing.border.BevelBorder;
 import javax.swing.UIManager;

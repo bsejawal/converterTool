@@ -1,9 +1,15 @@
-package com.fpp.converter;
+package com.fpp.factory;
+
+import com.fpp.converter.Converter;
+import com.fpp.converter.Km2Mile;
+import com.fpp.converter.Mile2Km;
 
 public class LengthFactory extends AbstractFactory {
 
 	@Override
 	public Converter getLength(String length) {
+  	  System.out.println("at LengthFactory");
+  	  
 		// TODO Auto-generated method stub
 		if(length == null){
 	         return null;

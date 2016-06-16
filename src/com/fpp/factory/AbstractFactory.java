@@ -1,4 +1,6 @@
-package com.fpp.converter;
+package com.fpp.factory;
+
+import com.fpp.converter.Converter;
 
 public abstract class AbstractFactory {
 	   public abstract Converter getLength(String length);
