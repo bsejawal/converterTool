@@ -3,19 +3,19 @@ package com.fpp.converter;
 public class TemperatureFactory  extends AbstractFactory{
 
 	@Override
-	Converter getLength(String color) {
+	public Converter getLength(String color) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	Converter getWeight(String shape) {
+	public Converter getWeight(String shape) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	Converter getTemperature(String temperature) {
+	public Converter getTemperature(String temperature) {
 		// TODO Auto-generated method stub
 		if(temperature == null){
 	         return null;

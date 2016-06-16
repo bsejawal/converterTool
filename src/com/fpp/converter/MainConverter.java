@@ -1,35 +1,29 @@
 package com.fpp.converter;
 
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+
+import com.fpp.ui.ConvertorFrame;
+
 public class MainConverter {
-
+	/**
+	 * Launch the application.
+	 */
 	public static void main(String[] args) {
-
-		AbstractFactory weightFactory = FactoryProducer.getFactory("WEIGHT");
-		Converter weight1 = weightFactory.getWeight("Kg2Lbs");
-		Double a =23.0;
-		String b = "45587455";
-		try {
-			if(!b.matches("[-+]?\\d*\\.?\\d+")){
-				throw new BadInputException("Invalid Number");
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ConvertorFrame frame = new ConvertorFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-			
-			weight1.convert(a);
-		} catch (BadInputException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		});
 
-		/*AbstractFactory lengthFactory = FactoryProducer.getFactory("LENGTH");
-		Converter km2Meter = lengthFactory.getLength("Km2Meter");
-//		System.out.println(km2Meter.convert(2));
-
-		// TEMPERATURE
-		AbstractFactory temperatureFactory = FactoryProducer.getFactory("TEMPERATURE");
-		Converter celcius2Fahrenheit = temperatureFactory.getTemperature("Celsius2Fahrenheit");
-		System.out.println("celcius2Fahrenheit" + celcius2Fahrenheit.convert(-40));
-
-		Converter fahrenheit2Celcius = temperatureFactory.getTemperature("Fahrenheit2Celsius");
-		System.out.println("Fahrenheit2Celcius" + fahrenheit2Celcius.convert(-40));
-*/
-	}
+				
+	}	
 }

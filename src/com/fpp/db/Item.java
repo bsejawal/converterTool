@@ -13,14 +13,14 @@ public class Item extends MySql {
         this.connect();
     }
 
-	public Item getItem(int id) throws InstantiationException, IllegalAccessException, SQLException {
+	public void getItem(int id) throws InstantiationException, IllegalAccessException, SQLException {
         String sql = "SELECT * FROM items WHERE `id` =? LIMIT 1";
         PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setInt(1, id);
-        List<Item> list =find(ps);
+       
+        
         close();
-        if (list!=null) return list.get(0);
-        return null;
+//        if (list!=null) //return list.get(0);
+//        return null;
     }
 
 	/*public List<Item> rows(ResultSet rs) throws SQLException {
@@ -34,8 +34,8 @@ public class Item extends MySql {
         return null;
     }*/
 	
-	public Item row(ResultSet rs) throws SQLException {
-        Item item = new Item();
+//	public Item row(ResultSet rs) throws SQLException {
+//        Item item = new Item();
 //        item.setId(rs.getInt("id"));
 //        item.setName(rs.getString("name"));
 //        item.setCategory(rs.getString("category"));
@@ -45,7 +45,7 @@ public class Item extends MySql {
 //        item.setContactPerson(rs.getString("contact_person"));
 //        item.setContactPhone(rs.getString("contact_phone"));
 //        item.setDetails(rs.getString("details"));
-        return item;
-    }
+//        return item;
+//    }
 
 }

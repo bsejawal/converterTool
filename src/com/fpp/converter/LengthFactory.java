@@ -3,7 +3,7 @@ package com.fpp.converter;
 public class LengthFactory extends AbstractFactory {
 
 	@Override
-	Converter getLength(String length) {
+	public Converter getLength(String length) {
 		// TODO Auto-generated method stub
 		if(length == null){
 	         return null;
@@ -13,20 +13,20 @@ public class LengthFactory extends AbstractFactory {
 	         return new Km2Mile();
 	         
 	      }else if(length.equalsIgnoreCase("Km2Meter")){
-	         return new Km2Meter();
+	         return new Mile2Km();
 	         
 	      }
 		return null;
 	}
 
 	@Override
-	Converter getWeight(String shape) {
+	public Converter getWeight(String shape) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	Converter getTemperature(String shape) {
+	public Converter getTemperature(String shape) {
 		// TODO Auto-generated method stub
 		return null;
 	}
